@@ -1,3 +1,28 @@
+:root {
+  /* Primary Colors */
+  --primary-dark: #1a1a2e;
+  --primary-medium: #16213e;
+  --primary-light: #0f3460;
+  
+  /* Accent Colors */
+  --accent-cyan: #00d4ff;
+  --accent-cyan-dark: #0099cc;
+  
+  /* Text Colors */
+  --text-white: #fff;
+  --text-black: #000;
+  
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-darker: rgba(0, 0, 0, 0.5);
+  
+  /* Accent Shadow */
+  --accent-shadow: rgba(0, 212, 255, 0.3);
+  --accent-hover-bg: rgba(0, 212, 255, 0.1);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
