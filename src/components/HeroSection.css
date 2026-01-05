@@ -1,0 +1,120 @@
+.hero-section {
+  background: linear-gradient(135deg, #0a0e27 0%, #16213e 100%);
+  padding: 80px 20px 60px;
+  text-align: center;
+  height: fit-content;
+  color: var(--text-white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+}
+
+.hero-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  height: 70vh;
+}
+.hero-img {
+  width: 85%;
+  height: 85%;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  margin: 20px 0;
+  line-height: 1.2;
+  max-width: 800px;
+  text-align: left;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 20px auto 40px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 14px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--accent-cyan);
+  color: var(--primary-dark);
+}
+
+.btn-primary:hover {
+  background: var(--accent-cyan-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--text-white);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+  }
+
+  .hero-container {
+    width: 100%;
+  }
+  .hero-title {
+    font-size: 30px;
+    padding: 0 15px 0 15px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    padding: 0 15px 0 15px;
+  }
+
+  .hero-logo{
+    width: 80vw;
+    height: auto;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+}

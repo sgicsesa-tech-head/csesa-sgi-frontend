@@ -1,10 +1,16 @@
 import React from 'react';
+import HeroSection from '../components/HeroSection';
+import UpcomingEvents from '../components/UpcomingEvents';
+import BlogSection from '../components/BlogSection';
+import AboutSection from '../components/AboutSection';
 
 const Home = () => {
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Welcome to CSESA-SGI</h1>
-      <p>This is the home page.</p>
+    <div className="home-page">
+      <HeroSection />
+      <UpcomingEvents />
+      <BlogSection />
+      <AboutSection />
     </div>
   );
 };
