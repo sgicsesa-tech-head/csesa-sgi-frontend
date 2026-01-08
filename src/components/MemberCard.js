@@ -10,6 +10,12 @@ const MemberCard = ({ key, name, role, image }) => {
       <div className="member-info">
         <h3 className="member-name">{name}</h3>
         <p className="member-role">{role}</p>
+        <a href={socialM1} className="member-profile-link">
+        Instagram
+        </a>
+        <a href={socialM2} className="member-profile-link">
+        Linkedin
+        </a>
       </div>
     </div>
   );
