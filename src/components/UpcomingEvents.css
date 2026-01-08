@@ -189,6 +189,10 @@
   
   .section-title {
     font-size: 28px;
+    text-align: left;
+  }
+  .section-subtitle {
+    text-align: left;
   }
   
   .event-title {

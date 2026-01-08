@@ -12,8 +12,9 @@
 .hero-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 40vw;
+  /* border: 2px solid red; */
 }
 
 .hero-logo {
@@ -41,7 +42,7 @@
   font-size: 18px;
   color: rgba(255, 255, 255, 0.8);
   max-width: 600px;
-  margin: 20px auto 40px;
+  margin: 20px auto 40px 0;
   line-height: 1.6;
   text-align: justify;
 }
@@ -114,6 +115,7 @@
   }
   .hero-buttons {
     flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 300px;
   }
