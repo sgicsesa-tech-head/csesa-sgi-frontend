@@ -1,0 +1,155 @@
+/* ================= CARDS ================= */
+.info-card {
+  background: linear-gradient(145deg, #081c36, #0d2b52);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 0 28px rgba(0, 140, 255, 0.25);
+  color: #e5e7eb;
+  max-width: 820px;
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid rgba(0, 200, 255, 0.45);
+}
+
+/* ================= TITLES ================= */
+.card-title {
+  font-size: 24px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.card-title.cyan {
+  color: #66e3ff;
+}
+
+/* ================= CONTACT ITEMS ================= */
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 26px;
+  text-align: left;
+}
+
+.info-item div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.info-item h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.info-item p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #b9eeff;
+}
+
+/* ================= ICON BOX ================= */
+.icon {
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  flex-shrink: 0;
+}
+
+.icon svg {
+  font-size: 22px !important;
+  display: block;
+  margin: auto;
+}
+
+/* EMAIL */
+.icon.email {
+  color: #66e3ff;
+  border-color: #66e3ff;
+}
+
+/* ADDRESS */
+.icon.address {
+  color: #5dffb0;
+  border-color: #5dffb0;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .info-card {
+    padding: 24px;
+    width: 80%;
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .info-item {
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .icon {
+    min-width: 46px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .icon svg {
+    font-size: 20px !important;
+  }
+
+  .info-item h4 {
+    font-size: 15px;
+  }
+
+  .info-item p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-card {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .info-item {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    min-width: 42px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .icon svg {
+    font-size: 18px !important;
+  }
+
+  .info-item h4 {
+    font-size: 14px;
+  }
+
+  .info-item p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}

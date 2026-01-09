@@ -1,0 +1,15 @@
+/* ================= RIGHT SECTION ================= */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 640px) {
+  .right-section {
+    gap: 26px;
+  }
+}

@@ -1,12 +1,18 @@
-import React from 'react';
+import React from "react";
+import ContactInfo from "../components/ContactInfo";
+import SocialConnect from "../components/SocialConnect";
+import "./Contact.css";
 
-const Contact = () => {
+const ContactRight = () => {
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Contact Us</h1>
-      <p>Get in touch with us.</p>
+    <div className="right-section">
+      {/* Contact Information */}
+      <ContactInfo />
+
+      {/* Connect With Us */}
+      <SocialConnect />
     </div>
   );
 };
 
-export default Contact;
+export default ContactRight;
