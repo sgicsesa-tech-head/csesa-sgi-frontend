@@ -1,4 +1,6 @@
 import React from 'react';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import './UpcomingEvents.css';
 
 const UpcomingEvents = () => {
@@ -34,10 +36,10 @@ const UpcomingEvents = () => {
         </div>
         <div className="event-content">
           <div className="event-info">
-            <p className="event-date">📅 {event.date}</p>
+            <p className="event-date"><CalendarTodayIcon fontSize="small" /> {event.date}</p>
             <h3 className="event-title">{event.title}</h3>
             <p className="event-description">{event.description}</p>
-            <span className="event-time">🕐 {event.time}</span>
+            <span className="event-time"><AccessTimeIcon fontSize="small" /> {event.time}</span>
           </div>
           <button className="register-btn">Register →</button>
         </div>

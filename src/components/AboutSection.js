@@ -1,4 +1,6 @@
 import React from 'react';
+import PeopleIcon from '@mui/icons-material/People';
+import SchoolIcon from '@mui/icons-material/School';
 import './AboutSection.css';
 
 const AboutSection = () => {
@@ -71,11 +73,11 @@ const AboutSection = () => {
           
           <div className="about-features">
             <div className="feature-item">
-              <span className="feature-icon">👥</span>
+              <PeopleIcon className="feature-icon" />
               <span className="feature-text">564 Members</span>
             </div>
             <div className="feature-item">
-              <span className="feature-icon">🏫</span>
+              <SchoolIcon className="feature-icon" />
               <span className="feature-text">Faculty Info</span>
             </div>
           </div>

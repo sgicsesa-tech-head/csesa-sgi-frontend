@@ -3,6 +3,9 @@ import "./About.css";
 import "../components/MemberCard.css";
 import { membersData } from "../data/membersData.js";
 import MemberCard from "../components/MemberCard.js";
+import ComputerIcon from '@mui/icons-material/Computer';
+import PeopleIcon from '@mui/icons-material/People';
+import SchoolIcon from '@mui/icons-material/School';
 
 const About = () => {
   const [selectedBatch, setSelectedBatch] = useState("2025-26");
@@ -70,7 +73,7 @@ const About = () => {
       <section className="about-ahero">
         <div className="ahero-content">
           <div className="ahero-badge">
-            <span className="badge-icon">💻</span>
+            <ComputerIcon className="badge-icon" />
             COMPUTER SCIENCE & ENGINEERING STUDENT ASSOCIATION
           </div>
           <h1 className="ahero-title">
@@ -83,7 +86,7 @@ const About = () => {
 
         <div className="ahero-pillars">
           <div className="pillar-card">
-            <div className="pillar-icon">👥</div>
+            <PeopleIcon className="pillar-icon" sx={{ fontSize: 48 }} />
             <h3>Our Community</h3>
             <p>
               A diverse group of passionate students, building a strong network of peers to share knowledge, resources,
@@ -91,14 +94,14 @@ const About = () => {
             </p>
           </div>
           <div className="pillar-card">
-            <div className="pillar-icon">💻</div>
+            <ComputerIcon className="pillar-icon" sx={{ fontSize: 48 }} />
             <h3>Our Mission</h3>
             <p>
               To empower students with cutting-edge technical knowledge and create a vibrant community of innovators and problem-solvers. Hands-on workshops, hackathons, and real-world projects designed to sharpen industry-relevant skills.
             </p>
           </div>
           <div className="pillar-card">
-            <div className="pillar-icon">🎓</div>
+            <SchoolIcon className="pillar-icon" sx={{ fontSize: 48 }} />
             <h3>Our Impact</h3>
             <p>
               Bridging the gap between curriculum and industry demands through
