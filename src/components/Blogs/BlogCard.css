@@ -11,8 +11,9 @@
 }
 
 .card:hover{
-  box-shadow: 0 0 16px rgba(255, 100, 220, 0.6);
-  transform: translateY(-3px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+  border-color: rgba(99, 102, 241, 0.5);
 }
 
 .userPic{
@@ -61,7 +62,7 @@
 
 .aboutPost .blog-category{
   margin-right: 2rem; 
-  background-color: #0f3d75;
+  background-color: rgba(139, 92, 246, 1);
   padding: 4px 8px;
   border-radius: 0.7rem;
   font-size:small;
