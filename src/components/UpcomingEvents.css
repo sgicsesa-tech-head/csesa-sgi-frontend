@@ -119,6 +119,9 @@
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
   margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .event-title {
@@ -138,7 +141,9 @@
 .event-time {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .register-btn {
