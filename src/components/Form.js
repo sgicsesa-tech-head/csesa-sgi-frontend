@@ -22,7 +22,7 @@ const ContactForm = () => {
   return (
     <div className="contact-container">
       <form className="contact-form" onSubmit={handleSubmit}>
-        <h2>Get in touch</h2>
+        <h2 className="gradient-text">Get in touch</h2>
         <label>
           Your Name 
           <input
