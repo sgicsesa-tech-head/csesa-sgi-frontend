@@ -1,18 +1,22 @@
 import React from "react";
 import ContactInfo from "../components/ContactInfo";
 import SocialConnect from "../components/SocialConnect";
+import ContactForm from "../components/Form";
 import "./Contact.css";
 
-const ContactRight = () => {
+const Contact = () => {
   return (
-    <div className="right-section">
-      {/* Contact Information */}
-      <ContactInfo />
+    <div className="contact-page">
+      <div className="contact-left">
+        <ContactForm />
+      </div>
 
-      {/* Connect With Us */}
-      <SocialConnect />
+      <div className="contact-right">
+        <ContactInfo />
+        <SocialConnect />
+      </div>
     </div>
   );
 };
 
-export default ContactRight;
+export default Contact;
