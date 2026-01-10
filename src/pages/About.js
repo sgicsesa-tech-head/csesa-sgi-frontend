@@ -66,22 +66,22 @@ const About = () => {
 
   return (
     <div className="about-page">
-      {/* Hero Section */}
-      <section className="about-hero">
-        <div className="hero-content">
-          <div className="hero-badge">
+      {/* ahero Section */}
+      <section className="about-ahero">
+        <div className="ahero-content">
+          <div className="ahero-badge">
             <span className="badge-icon">💻</span>
             COMPUTER SCIENCE & ENGINEERING STUDENT ASSOCIATION
           </div>
-          <h1 className="hero-title">
+          <h1 className="ahero-title">
             About Us
           </h1>
-          <p className="hero-description">
+          <p className="ahero-description">
             CSESA (Computer Science & Engineering Students Association) and SGI (Student Group Initiative) are premier student organizations dedicated to fostering innovation, collaboration, and excellence in the field of computer science and technology.
           </p>
         </div>
 
-        <div className="hero-pillars">
+        <div className="ahero-pillars">
           <div className="pillar-card">
             <div className="pillar-icon">👥</div>
             <h3>Our Community</h3>
