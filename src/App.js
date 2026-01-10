@@ -7,6 +7,9 @@ import Footer from './components/Footer';
 import Home from './pages/home';
 import About from './pages/About';
 import Events from './pages/Events';
+import UpcomingEventsPage from './pages/UpcomingEventsPage';
+import PastEventsPage from './pages/PastEventsPage';
+import EventDetailPage from './pages/EventDetailPage';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
@@ -35,6 +38,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/upcoming" element={<UpcomingEventsPage />} />
+          <Route path="/events/past" element={<PastEventsPage />} />
+          <Route path="/events/:type/:id" element={<EventDetailPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

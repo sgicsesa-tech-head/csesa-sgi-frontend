@@ -1,15 +1,40 @@
+.contact-page{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px 0 40px 0;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 40%;
+}
+
 /* ================= RIGHT SECTION ================= */
-.right-section {
+.contact-right {
   display: flex;
   flex-direction: column;
   gap: 32px;
   align-items: center;
-  width: 100%;
+  width: 40%;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 640px) {
-  .right-section {
+  .contact-page{
+    flex-direction: column;
+    gap: 40px;
+  }
+  .contact-left {
+    width: 90%;
+    gap: 20px;
+  }
+  .contact-right {
+    width: 100%;
     gap: 26px;
   }
 }

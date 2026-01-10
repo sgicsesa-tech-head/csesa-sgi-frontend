@@ -1,10 +1,10 @@
 import React from 'react';
-
+import BlogList from '../components/Blogs/BlogList'
 const Blog = () => {
   return (
     <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Blog</h1>
-      <p>Read our latest blog posts.</p>
+    
+      <BlogList/>
     </div>
   );
 };

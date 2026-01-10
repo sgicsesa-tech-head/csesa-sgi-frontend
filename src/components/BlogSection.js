@@ -1,4 +1,7 @@
 import React from 'react';
+import ComputerIcon from '@mui/icons-material/Computer';
+import MicIcon from '@mui/icons-material/Mic';
+import ArticleIcon from '@mui/icons-material/Article';
 import './BlogSection.css';
 
 const BlogSection = () => {
@@ -9,7 +12,7 @@ const BlogSection = () => {
       readTime: '5-6 min read',
       title: 'Understanding System Design Patterns',
       description: 'A comprehensive guide for beginners to understand scalable architecture and prepare for interviews.',
-      image: '💻',
+      icon: <ComputerIcon sx={{ fontSize: 40 }} />,
       bgColor: '#1a2332'
     },
     {
@@ -18,7 +21,7 @@ const BlogSection = () => {
       readTime: '3 min read',
       title: 'Highlights from the Argue-Mind',
       description: 'A recap of our recent debate competition where students showcased their critical thinking and public speaking skills.',
-      image: '🎤',
+      icon: <MicIcon sx={{ fontSize: 40 }} />,
       bgColor: '#2a2a2a'
     },
     {
@@ -27,7 +30,7 @@ const BlogSection = () => {
       readTime: '4 min read',
       title: 'CSESA Inauguration',
       description: 'Kickstarting a new chapter of tech enthusiasm at SGI with workshops, hackathons, and more.',
-      image: '📋',
+      icon: <ArticleIcon sx={{ fontSize: 40 }} />,
       bgColor: '#2a2a2a'
     }
   ];
@@ -50,7 +53,7 @@ const BlogSection = () => {
         <div className="featured-post">
           <div className="blog-card large">
             <div className="blog-image" style={{ background: blogPosts[0].bgColor }}>
-              <span className="blog-emoji">{blogPosts[0].image}</span>
+              <span className="blog-emoji">{blogPosts[0].icon}</span>
             </div>
             <div className="blog-content">
               <div className="blog-meta">
@@ -69,7 +72,7 @@ const BlogSection = () => {
           {blogPosts.slice(1).map(post => (
             <div key={post.id} className="blog-card small">
               <div className="blog-image-small" style={{ background: post.bgColor }}>
-                <span className="blog-emoji-small">{post.image}</span>
+                <span className="blog-emoji-small">{post.icon}</span>
               </div>
               <div className="blog-content-small">
                 <div className="blog-meta">
