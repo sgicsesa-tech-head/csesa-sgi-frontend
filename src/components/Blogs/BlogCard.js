@@ -4,6 +4,7 @@
 
 import "./BlogCard.css";
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 export const BlogCard = ({
@@ -15,6 +16,7 @@ export const BlogCard = ({
   date,
   title,
   description,
+  slug
 }) => {
   return (
     <>
@@ -38,7 +40,10 @@ export const BlogCard = ({
         </a>
         <p className="card-text">{description}</p>
         <div className="card-footer">
-          <a href="" className="read-more">Read More →</a>
+         <Link to={`/blog/${slug}`} className="read-more">
+           Read More →
+         </Link>
+
         </div>
       </div>
     </>
