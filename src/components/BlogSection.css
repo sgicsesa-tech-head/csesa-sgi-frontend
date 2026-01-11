@@ -60,19 +60,6 @@
   font-size: 80px;
 }
 
-.blog-emoji {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
 .blog-content {
   padding: 28px;
   flex: 1;
@@ -151,10 +138,6 @@
   font-size: 48px;
   border-radius: 12px;
   margin-right: 20px;
-}
-
-.blog-emoji-small {
-  animation: float 3s ease-in-out infinite;
 }
 
 .blog-content-small {

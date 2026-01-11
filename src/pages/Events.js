@@ -14,7 +14,7 @@ const Events = () => {
   const [pastFilter, setPastFilter] = useState('All');
 
   const upcomingCategories = ['All', 'Technical', 'Social', 'Non-Technical'];
-  const pastYears = ['All', '2023', '2022'];
+  const pastYears = ['All', '2025'];
 
   const filteredUpcomingEvents = upcomingFilter === 'All' 
     ? upcomingEvents.slice(0, 3)
