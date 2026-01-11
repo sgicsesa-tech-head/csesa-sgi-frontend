@@ -46,13 +46,10 @@ code {
 }
 
 
-.animated-gradient-text {
+.animated-gradient-text_purple {
   background: linear-gradient(
     to right,
-    #00f0ff,
-    #5ef2ff,
-    #7e5fef,
-    #00f0ff
+    #9c21d9 , #8b5cf6, #4f8cff,#9c21d9 
   );
 
   -webkit-background-clip: text;
