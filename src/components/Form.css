@@ -3,23 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.gradient-text {
-  font-size: 64px;
-  font-weight: 600;
-  font-family: sans-serif;
 
-  background: linear-gradient(
-    90deg,
-    #ff4fd8,
-    #8b5cf6,
-    #4f8cff
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
 .contact-container {
   display: flex;
   justify-content: center;
