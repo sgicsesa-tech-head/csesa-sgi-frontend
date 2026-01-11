@@ -5,7 +5,7 @@ import "./ContactInfo.css";
 const ContactInfo = () => {
   return (
     <div className="info-card">
-      <h3 className="card-title cyan">Contact Information</h3>
+      <h3 className="card-title cyan animated-gradient-text_blue">Contact Information</h3>
 
       <div className="info-item">
         <div className="icon email">

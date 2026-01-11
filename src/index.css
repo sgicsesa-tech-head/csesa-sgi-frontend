@@ -21,6 +21,12 @@
   /* Accent Shadow */
   --accent-shadow: rgba(0, 212, 255, 0.3);
   --accent-hover-bg: rgba(0, 212, 255, 0.1);
+
+  /* Gradient */
+  --gradient-1: linear-gradient(  90deg, #ff4fd8, #8b5cf6, #4f8cff);
+  /* ----- */
+
+
 }
 
 body {
@@ -37,4 +43,65 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.animated-gradient-text_purple {
+  background: linear-gradient(
+    to right,
+    #9c21d9 , #8b5cf6, #4f8cff,#9c21d9 
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  color: transparent;
+
+  animation: gradientAnimation 5s linear infinite;
+} 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  
+}
+
+
+
+.animated-gradient-text_blue {
+  background: linear-gradient(
+    to right,
+    #00f0ff,
+    #5ef2ff,
+    #3981fe,
+    #00f0ff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  color: transparent;
+
+  animation: gradientAnimation 5s linear infinite;
+} 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  
+}
+
+.glow {
+  text-shadow:
+    0 0 5px rgba(255,255,255,0.4),
+    0 0 10px rgba(0,255,255,0.6),
+    0 0 20px rgba(255,0,255,0.6);
 }

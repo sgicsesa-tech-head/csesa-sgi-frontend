@@ -95,7 +95,7 @@ const About = () => {
           </div>
           <div className="pillar-card">
             <ComputerIcon className="pillar-icon" sx={{ fontSize: 48 }} />
-            <h3>Our Mission</h3>
+            <h3>Our Vision</h3>
             <p>
               To empower students with cutting-edge technical knowledge and create a vibrant community of innovators and problem-solvers. Hands-on workshops, hackathons, and real-world projects designed to sharpen industry-relevant skills.
             </p>

@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section className="hero-section">
       <div className="hero-container">
-        <h1 className="hero-title">
+        <h1 className="hero-title animated-gradient-text_purple">
           Computer Science & Engineering Students Association
         </h1>
 
