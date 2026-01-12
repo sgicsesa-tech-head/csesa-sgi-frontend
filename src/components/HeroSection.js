@@ -16,7 +16,7 @@ const HeroSection = () => {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn-primary">View Upcoming Events →</button>
+          <button className="btn-primary">Upcoming Events →</button>
           <button className="btn-secondary">Learn About Us</button>
         </div>
       </div>

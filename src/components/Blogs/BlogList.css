@@ -1,0 +1,64 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.card-container .card {
+  flex: 1 1 320px;
+  max-width: 400px;
+}
+
+/* Large screens (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card-container {
+    gap: 2.5rem;
+    padding: 3rem 2rem;
+  }
+  
+  .card-container .card {
+    flex: 1 1 calc(33.333% - 2.5rem);
+  }
+}
+
+/* Medium screens (tablets, 768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .card-container {
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .card-container .card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+/* Small screens (mobile, 480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .card-container {
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .card-container .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Extra small screens (mobile, below 480px) */
+@media (max-width: 479px) {
+  .card-container {
+    gap: 1.5rem;
+    padding: 1rem 0.75rem;
+  }
+  
+  .card-container .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

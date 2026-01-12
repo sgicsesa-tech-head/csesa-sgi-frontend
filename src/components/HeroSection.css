@@ -115,8 +115,9 @@
     height: auto;
   }
   .hero-buttons {
+    align-self: center;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
   }
 }

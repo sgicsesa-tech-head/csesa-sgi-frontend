@@ -62,7 +62,6 @@
   width: 40px;
   height: 40px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,26 +159,35 @@
   color: rgba(255, 255, 255, 0.3);
 }
 
-@media (max-width: 968px) {
+@media screen and (max-width: 968px) {
   .footer-content {
     flex-direction: column;
     gap: 40px;
+    text-align: left;
   }
-  
+
+  .footer-section {
+    width: 100%;
+    text-align: left;
+  }
+
   .footer-brand {
-    grid-column: 1 / -1;
     max-width: 100%;
   }
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   .footer-content {
     flex-direction: column;
     gap: 30px;
+    text-align: left;
   }
-  
+  .logo-text {
+    text-align: left;
+  }
   .footer-section {
     width: 100%;
+    text-align: left;
   }
 
   .footer-bottom {
