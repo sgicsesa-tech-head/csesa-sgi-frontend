@@ -4,6 +4,7 @@
 import React from "react";
 import { BlogCard } from "./BlogCard";
 import { blogPosts } from "../../data/blogData";
+import "./BlogList.css";
 
 const BlogList = () => {
   return (

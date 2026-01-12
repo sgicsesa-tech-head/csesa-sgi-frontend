@@ -32,7 +32,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section footer-brand">
           <div className="footer-logo">
-            <img src={icon} className="logo-icon" />
+            <img src={icon} className="logo-icon" alt="CSESA SGI Logo" />
             <span className="logo-text">CSESA + SGI</span>
           </div>
           <p className="footer-description">
