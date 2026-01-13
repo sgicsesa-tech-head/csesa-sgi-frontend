@@ -3,6 +3,7 @@ import "./About.css";
 import "../components/MemberCard.css";
 import { membersData } from "../data/membersData.js";
 import MemberCard from "../components/MemberCard.js";
+import CurrentBatch from "../components/CurrentBatch.js";
 import ComputerIcon from '@mui/icons-material/Computer';
 import PeopleIcon from '@mui/icons-material/People';
 import SchoolIcon from '@mui/icons-material/School';
@@ -150,6 +151,9 @@ const About = () => {
           ))}
         </div>
       </section>
+
+      {/* Current Batch */}
+      <CurrentBatch />
 
       {/* Members Section */}
       <section className="members-section">
