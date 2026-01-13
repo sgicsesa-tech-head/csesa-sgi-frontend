@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Loader from './components/Loader';
-import Navbar from './components/navbar';
-import Footer from './components/Footer';
+import Loader from './components/Common/Loader';
+import Navbar from './components/Common/navbar';
+import Footer from './components/Common/Footer';
 import Home from './pages/home';
 import About from './pages/About';
 import Events from './pages/Events';

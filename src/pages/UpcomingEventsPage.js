@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { upcomingEvents } from '../data/eventsData';
-import EventCard from '../components/EventCard';
+import EventCard from '../components/Events/EventCard';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import EventBusyIcon from '@mui/icons-material/EventBusy';
 import './UpcomingEventsPage.css';

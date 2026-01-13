@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { upcomingEvents, pastEvents } from '../data/eventsData';
-import EventCard from '../components/EventCard';
+import EventCard from '../components/Events/EventCard';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import HistoryIcon from '@mui/icons-material/History';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';

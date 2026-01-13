@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { pastEvents } from '../data/eventsData';
-import EventCard from '../components/EventCard';
+import EventCard from '../components/Events/EventCard';
 import HistoryIcon from '@mui/icons-material/History';
 import SearchOffIcon from '@mui/icons-material/SearchOff';
 import './PastEventsPage.css';

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -26,27 +27,27 @@ const Navbar = () => {
 
         <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMenu}>
+            <Link to="/" className={`nav-links ${location.pathname === '/' ? 'active' : ''}`} onClick={closeMenu}>
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-links" onClick={closeMenu}>
+            <Link to="/about" className={`nav-links ${location.pathname === '/about' ? 'active' : ''}`} onClick={closeMenu}>
               About
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/events" className="nav-links" onClick={closeMenu}>
+            <Link to="/events" className={`nav-links ${location.pathname === '/events' ? 'active' : ''}`} onClick={closeMenu}>
               Events
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/blog" className="nav-links" onClick={closeMenu}>
+            <Link to="/blog" className={`nav-links ${location.pathname === '/blog' ? 'active' : ''}`} onClick={closeMenu}>
               Blog
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className="nav-links" onClick={closeMenu}>
+            <Link to="/contact" className={`nav-links ${location.pathname === '/contact' ? 'active' : ''}`} onClick={closeMenu}>
               Contact
             </Link>
           </li>
