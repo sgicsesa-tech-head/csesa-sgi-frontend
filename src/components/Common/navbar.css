@@ -82,6 +82,14 @@
   color: var(--accent-cyan);
 }
 
+.nav-links.active {
+  color: var(--accent-cyan);
+}
+
+.nav-links.active::after {
+  width: 70%;
+}
+
 .menu-icon {
   display: none;
   color: var(--text-white);
@@ -128,6 +136,11 @@
   .nav-links:hover {
     background-color: var(--accent-hover-bg);
     border-radius: 0;
+  }
+
+  .nav-links.active {
+    background-color: var(--accent-hover-bg);
+    border-left: 4px solid var(--accent-cyan);
   }
 
   .navbar-logo {

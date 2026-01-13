@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeroSection.css";
-import csesa_logo from "../assets/logo.png";
+import csesa_logo from "../../assets/logo.png";
 
 const HeroSection = () => {
   return (
