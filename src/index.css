@@ -23,7 +23,9 @@
   --accent-hover-bg: rgba(0, 212, 255, 0.1);
 
   /* Gradient */
-  --gradient-1: linear-gradient(  90deg, #ff4fd8, #8b5cf6, #4f8cff);
+  --electric-violet:#7f00ff;
+  --neon-blue:#3f8efc;
+
   /* ----- */
 
 
@@ -48,8 +50,9 @@ code {
 
 .animated-gradient-text_purple {
   background: linear-gradient(
-    to right,
-    #9c21d9 , #8b5cf6, #4f8cff,#9c21d9 
+    90deg,
+   var(--electric-violet),var(--neon-blue),var(--electric-violet)
+   /* #5b2a86,#6f2dbd,#384cca,#2b6cff, #5b2a86 */
   );
 
   -webkit-background-clip: text;
@@ -58,7 +61,10 @@ code {
   background-size: 200% auto;
   color: transparent;
 
-  animation: gradientAnimation 5s linear infinite;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(127, 0, 255, 0.35);
+
+  animation: gradientAnimation 10s linear infinite;
 } 
 @keyframes gradientAnimation {
   0% {
@@ -75,11 +81,10 @@ code {
 .animated-gradient-text_blue {
   background: linear-gradient(
     to right,
-    #00f0ff,
-    #5ef2ff,
-    #3981fe,
-    #00f0ff
-  );
+   var(--neon-blue), 
+   var(--electric-violet),
+   var(--neon-blue )
+    );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

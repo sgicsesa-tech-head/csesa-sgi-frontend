@@ -1,0 +1,162 @@
+/* =========================
+   Global Page Wrapper
+========================= */
+.page {
+  min-height: 100vh;
+  background-color: #0f172a; /* dark background */
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Blog List Section
+========================= */
+.blog-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Single Blog Detail Page
+========================= */
+.blog-detail {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.blog-detail-container {
+  max-width: 850px;
+  width: 100%;
+  background-color: #020617;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   Back Link
+========================= */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Blog Title
+========================= */
+.blog-detail-container h1 {
+  font-size: 2.25rem;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  color: #f8fafc;
+}
+
+/* =========================
+   Author & Date
+========================= */
+.blog-author {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* =========================
+   Blog Image
+========================= */
+.blog-detail-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  object-fit: cover;
+}
+
+/* =========================
+   Blog Content
+========================= */
+.blog-detail-container p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #e5e7eb;
+  margin-bottom: 1.25rem;
+}
+
+/* =========================
+   Blog Not Found
+========================= */
+h2 {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+/* =========================
+   Responsive Styles
+========================= */
+@media (max-width: 768px) {
+  .blog-detail-container {
+    padding: 1.75rem;
+  }
+
+  .blog-detail-container h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .blog-detail-container {
+    padding: 1.5rem;
+  }
+
+  .blog-detail-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .blog-detail-container p {
+    font-size: 0.95rem;
+  }
+}
+
+.aboutUser{
+  display: flex;
+  align-items: center; 
+  gap: 1rem;
+  margin-bottom: 1rem;
+  
+  
+}
+
+.aboutUser .userName{
+  font-size: large;
+  font-weight:600 ;
+  color: #ffffff;
+  align-items: center; 
+}
+
+.aboutUser .userPic{
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 100% ;
+    border-color: #5586cb;
+    border: 1rem;
+    display: flex;
+    align-items: center; 
+    border: 1px solid #1c2d43;
+    border-radius: 100%;
+    
+}

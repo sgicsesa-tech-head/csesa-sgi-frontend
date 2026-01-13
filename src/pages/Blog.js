@@ -20,28 +20,29 @@ const Blog = () => {
       return <h2 style={{ color: "#fff" }}>Blog not found</h2>;
     }
 
-    const { title, image, userName, date, content } = blog;
+    const { title, image, userName, date, content,userId, userImg } = blog;
 
     return (
       <div className="page">
-        <section className="blog-detail">
+        
           <div className="blog-detail-container">
-            <Link to="/blog" className="back-link">
-              ← Back to Blogs
-            </Link>
-
+            <a href={userId}>
+          <div className="aboutUser">
+            <img className="userPic" src={userImg} alt="user" />
+            <span className="userName">{userName}</span>
+          </div>
+        </a>            
             <h1>{title}</h1>
-            <p className="blog-author">
-              {userName} • {date}
-            </p>
-
             <img src={image} alt={title} />
 
             {content.split("\n").map((para, i) => (
               <p key={i}>{para}</p>
             ))}
+            <Link to="/blog" className="back-link">
+              ← Back to Blogs
+            </Link>
           </div>
-        </section>
+        
       </div>
     );
   }
