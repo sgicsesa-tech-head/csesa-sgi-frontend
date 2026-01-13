@@ -1,7 +1,7 @@
 import React from 'react';
 import { GitHub, Twitter, LinkedIn, Instagram, Email, LocationOn } from '@mui/icons-material';
 import './Footer.css';
-import icon from '../assets/logo.png';
+import icon from '../../assets/logo.png';
 
 const Footer = () => {
   const socialLinks = [

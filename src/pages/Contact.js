@@ -1,7 +1,7 @@
 import React from "react";
-import ContactInfo from "../components/ContactInfo";
-import SocialConnect from "../components/SocialConnect";
-import ContactForm from "../components/Form";
+import ContactInfo from "../components/Contact/ContactInfo";
+import SocialConnect from "../components/Contact/SocialConnect";
+import ContactForm from "../components/Contact/Form";
 import "./Contact.css";
 
 const Contact = () => {

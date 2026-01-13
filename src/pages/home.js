@@ -1,9 +1,9 @@
 import React from 'react';
-import HeroSection from '../components/HeroSection';
-import UpcomingEvents from '../components/UpcomingEvents';
-import CurrentBatch from '../components/CurrentBatch';
-import BlogSection from '../components/BlogSection';
-import AboutSection from '../components/AboutSection';
+import HeroSection from '../components/Home/HeroSection';
+import UpcomingEvents from '../components/Home/UpcomingEvents';
+import CurrentBatch from '../components/Home/CurrentBatch';
+import BlogSection from '../components/Home/BlogSection';
+import AboutSection from '../components/Home/AboutSection';
 
 const Home = () => {
   return (
