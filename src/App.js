@@ -12,6 +12,7 @@ import PastEventsPage from './pages/PastEventsPage';
 import EventDetailPage from './pages/EventDetailPage';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import Admin from './pages/Admin';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -43,6 +44,7 @@ function App() {
           <Route path="/events/:type/:id" element={<EventDetailPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
         <Footer />
       </div>

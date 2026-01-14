@@ -1,5 +1,5 @@
 .events-page {
-  background: linear-gradient(180deg, #0a0a1a 0%, #1a1a2e 100%);
+  background: var(--bg-gradient);
   color: white;
 }
 
