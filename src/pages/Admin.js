@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Admin.css';
 import BlogAdmin from '../components/Admin/BlogAdmin';
 import EventAdmin from '../components/Admin/EventAdmin';
@@ -6,6 +7,15 @@ import MemberAdmin from '../components/Admin/MemberAdmin';
 
 function Admin() {
   const [activeTab, setActiveTab] = useState('blogs');
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    if (window.confirm('Are you sure you want to logout?')) {
+      localStorage.removeItem('adminAuth');
+      localStorage.removeItem('adminUsername');
+      navigate('/admin/login');
+    }
+  };
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -23,8 +33,16 @@ function Admin() {
   return (
     <div className="admin-container">
       <div className="admin-header">
-        <h1>Admin Dashboard</h1>
-        <p>Manage your website content</p>
+        <div className="admin-header-content">
+          <div>
+            <h1>Admin Dashboard</h1>
+            <p>Manage your website content</p>
+          </div>
+          <button className="logout-button" onClick={handleLogout}>
+            <i className="fas fa-sign-out-alt"></i>
+            Logout
+          </button>
+        </div>
       </div>
 
       <div className="admin-tabs">

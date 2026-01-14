@@ -13,6 +13,8 @@ import EventDetailPage from './pages/EventDetailPage';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
+import AdminLogin from './pages/AdminLogin';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -44,7 +46,15 @@ function App() {
           <Route path="/events/:type/:id" element={<EventDetailPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route 
+            path="/admin" 
+            element={
+              <ProtectedRoute>
+                <Admin />
+              </ProtectedRoute>
+            } 
+          />
         </Routes>
         <Footer />
       </div>
