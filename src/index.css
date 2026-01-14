@@ -26,6 +26,9 @@
   --electric-violet:#7f00ff;
   --neon-blue:#3f8efc;
 
+  /* Background Gradient */
+  --bg-gradient: linear-gradient(135deg, #0a0e1a 0%, #1a1f35 50%, #0a0e1a 100%);
+
   /* ----- */
 
 
