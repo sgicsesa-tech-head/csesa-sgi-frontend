@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './AdminCommon.css';
-import { blogPosts } from '../../data/blogData';
+import { blogData } from '../../data/blogData';
 
 function BlogAdmin() {
   const [blogs, setBlogs] = useState([]);
@@ -18,7 +18,7 @@ function BlogAdmin() {
   });
 
   useEffect(() => {
-    setBlogs([...blogPosts]);
+    setBlogs([...blogData]);
   }, []);
 
   const handleInputChange = (e) => {

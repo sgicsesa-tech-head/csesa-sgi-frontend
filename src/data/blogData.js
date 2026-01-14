@@ -128,16 +128,10 @@ making it an engaging learning session.
     "Exploring how student-led communities help learners grow through collaboration and events.",
 
   content: `
-Student clubs play a vital role in fostering technical growth
-and peer-to-peer learning.
-
-### Benefits of Tech Communities
-- Knowledge sharing
-- Networking opportunities
-- Skill development
-
-Through events, workshops, and discussions, student clubs create
-an inclusive environment that nurtures future technologists.
+The objective of the event is to bring joy, support, and meaningful engagement to the children at Bal Kalyan Sankul, Kolhapur, located at M6PF+9G7, Race Course Naka, 
+Padmala, Kolhapur, Maharashtra 416012. A total of 220 children will be involved in this outreach program, where students will interact with them through fun games 
+storytelling sessions, and a dedicated counselling session to motivate and uplift them. The visit aims to create a positive emotional impact, encourage confidence among the kids, and build a bond of care and compassion. As part of the initiative, food will be donated to ensure every child enjoys a wholesome meal as a gesture of love and 
+support. 
   `,
 },
 

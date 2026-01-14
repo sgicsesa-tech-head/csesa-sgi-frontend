@@ -26,20 +26,21 @@ const Blog = () => {
       <div className="page">
         
           <div className="blog-detail-container">
-            <a href={userId}>
+          <a href={userId}>
           <div className="aboutUser">
             <img className="userPic" src={userImg} alt="user" />
             <span className="userName">{userName}</span>
           </div>
-        </a>            
+          </a>          
             <h1>{title}</h1>
             <img src={image} alt={title} />
+            <span className="date">{date}</span>
 
             {content.split("\n").map((para, i) => (
               <p key={i}>{para}</p>
             ))}
             <Link to="/blog" className="back-link">
-              ← Back to Blogs
+              <span className="arrow">←</span> Back to Blogs
             </Link>
           </div>
         

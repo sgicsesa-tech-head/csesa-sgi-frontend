@@ -35,13 +35,13 @@ export const BlogCard = ({
             <span className="date">{date}</span>
           </div>
         
-        <a href="">
+        
           <h5 className="card-title">{title}</h5>
-        </a>
+        
         <p className="card-text">{description}</p>
         <div className="card-footer">
          <Link to={`/blog/${slug}`} className="read-more">
-           Read More →
+           Read More <span className="arrow">→</span>
          </Link>
 
         </div>
