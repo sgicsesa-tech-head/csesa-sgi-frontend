@@ -178,7 +178,7 @@ export const pastEvents = [
     date: "Sep 15, 2023",
     location: "Tech Auditorium",
     venue: "Tech Auditorium",
-    image: "/images/codesprint-2023.jpg",
+    image: "https://drive.google.com/file/d/1s43IGnmvUN5WVHUcuogOq5DpNa3l7-yr/view",
     category: "Technical",
     tags: ["TECHNICAL", "HACKATHON"],
     outcomes: [
