@@ -65,6 +65,22 @@ const EventCard = ({ event, isPast = false }) => {
         <h3 className="event-title">{event.title}</h3>
         <p className="event-description">{event.description}</p>
 
+        {event.sponsor && event.sponsor.name && (
+          <div className="event-sponsor">
+            {event.sponsor.icon && (
+              <img 
+                src={event.sponsor.icon} 
+                alt={event.sponsor.name}
+                className="sponsor-icon"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
+              />
+            )}
+            <span className="sponsor-text">Sponsored by {event.sponsor.name}</span>
+          </div>
+        )}
+
         {!isPast && event.location && (
           <div className="event-location">
             <i className="icon-location"></i> {event.location}

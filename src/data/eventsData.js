@@ -38,7 +38,12 @@ export const upcomingEvents = [
     ],
     registrationLink: "#",
     capacity: 200,
-    registered: 145
+    registered: 145,
+    sponsor: {
+      name: "TechCorp Solutions",
+      icon: "/images/sponsors/techcorp-icon.png",
+      banner: "/images/sponsors/techcorp-banner.png"
+    }
   },
   {
     id: 2,
@@ -73,7 +78,12 @@ export const upcomingEvents = [
     ],
     registrationLink: "#",
     capacity: 50,
-    registered: 42
+    registered: 42,
+    sponsor: {
+      name: "BlockChain Labs",
+      icon: "/images/sponsors/blockchain-icon.png",
+      banner: "/images/sponsors/blockchain-banner.png"
+    }
   },
   {
     id: 3,
@@ -107,7 +117,12 @@ export const upcomingEvents = [
       "Event will end strictly at 10:00 PM"
     ],
     registrationLink: "#",
-    freeEntry: true
+    freeEntry: true,
+    sponsor: {
+      name: "FoodHub Catering",
+      icon: "/images/sponsors/foodhub-icon.png",
+      banner: "/images/sponsors/foodhub-banner.png"
+    }
   },
   {
     id: 4,
@@ -145,7 +160,12 @@ export const upcomingEvents = [
       "Refreshments will be served after the session"
     ],
     registrationLink: "#",
-    freeEntry: true
+    freeEntry: true,
+    sponsor: {
+      name: "Career Connect",
+      icon: "/images/sponsors/careerconnect-icon.png",
+      banner: "/images/sponsors/careerconnect-banner.png"
+    }
   }
 ];
 
@@ -182,7 +202,12 @@ export const pastEvents = [
     ],
     gallery: ["/images/gallery/codesprint1.jpg", "/images/gallery/codesprint2.jpg"],
     report: "#",
-    videoLink: "#"
+    videoLink: "#",
+    sponsor: {
+      name: "DevTech Corp",
+      icon: "/images/sponsors/devtech-icon.png",
+      banner: "/images/sponsors/devtech-banner.png"
+    }
   },
   {
     id: 102,
@@ -206,7 +231,12 @@ export const pastEvents = [
       { name: "Arjun Iyer", phone: "+91 98765 43220" },
       { name: "Pooja Joshi", phone: "+91 98765 43221" }
     ],
-    report: "#"
+    report: "#",
+    sponsor: {
+      name: "HealthTech AI",
+      icon: "/images/sponsors/healthtech-icon.png",
+      banner: "/images/sponsors/healthtech-banner.png"
+    }
   },
   {
     id: 103,
@@ -232,7 +262,12 @@ export const pastEvents = [
       "Live music and food stalls"
     ],
     gallery: ["/images/gallery/cultural1.jpg", "/images/gallery/cultural2.jpg", "/images/gallery/cultural3.jpg"],
-    videoLink: "#"
+    videoLink: "#",
+    sponsor: {
+      name: "Arts & Culture Foundation",
+      icon: "/images/sponsors/arts-icon.png",
+      banner: "/images/sponsors/arts-banner.png"
+    }
   }
 ];
 
