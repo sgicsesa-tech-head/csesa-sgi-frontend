@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./About.css";
 import "../components/About/MemberCard.css";
 import { membersData } from "../data/membersData.js";
-import MemberCard from "../components/About/MemberCard.js";
+import MemberBatch from "../components/About/MemberBatch.js";
 import CurrentBatch from "../components/Home/CurrentBatch.js";
 import ComputerIcon from '@mui/icons-material/Computer';
 import PeopleIcon from '@mui/icons-material/People';
@@ -36,7 +36,7 @@ const About = () => {
     },
   ];
 
-  const batches = ["2025-26", "2024-25", "2023-24", "2022-23"];
+  const batches = ["2025-26"];
 
   // Sort members by hierarchical order
   const getSortedMembers = (batch) => {
@@ -178,24 +178,15 @@ const About = () => {
           yearly batches.
         </p>
 
-        <div className="members-grid">
-          {membersData &&
-          membersData[selectedBatch] &&
-          membersData[selectedBatch].length > 0 ? (
-            getSortedMembers(selectedBatch).map((member) => (
-              <MemberCard
-                key={member.id}
-                name={member.name}
-                role={member.role}
-                image={member.image}
-              />
-            ))
-          ) : (
-            <div className="no-members">
-              <p>Member information for this batch will be updated soon.</p>
-            </div>
-          )}
-        </div>
+        {membersData &&
+        membersData[selectedBatch] &&
+        membersData[selectedBatch].length > 0 ? (
+          <MemberBatch members={getSortedMembers(selectedBatch)} />
+        ) : (
+          <div className="no-members">
+            <p>Member information for this batch will be updated soon.</p>
+          </div>
+        )}
       </section>
 
       {/* Development Team */}
