@@ -201,6 +201,38 @@ const EventDetailPage = () => {
                   </ul>
                 </section>
               )}
+
+              {event.sponsor && event.sponsor.name && (
+                <section className="detail-section sponsor-section">
+                  <h2 className="section-title">Sponsored By</h2>
+                  {event.sponsor.banner ? (
+                    <div className="sponsor-banner">
+                      <img 
+                        src={event.sponsor.banner} 
+                        alt={`Sponsored by ${event.sponsor.name}`}
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.parentElement.classList.add('banner-error');
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <div className="sponsor-info-card">
+                      {event.sponsor.icon && (
+                        <img 
+                          src={event.sponsor.icon} 
+                          alt={event.sponsor.name}
+                          className="sponsor-logo"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                          }}
+                        />
+                      )}
+                      <h3 className="sponsor-name">{event.sponsor.name}</h3>
+                    </div>
+                  )}
+                </section>
+              )}
             </div>
 
             {/* Right Column - Sidebar */}

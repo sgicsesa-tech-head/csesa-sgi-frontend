@@ -193,6 +193,57 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* Sponsor Section */
+.sponsor-section {
+  background: rgba(99, 102, 241, 0.05);
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.sponsor-banner {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sponsor-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sponsor-banner.banner-error {
+  display: none;
+}
+
+.sponsor-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.sponsor-info-card .sponsor-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+}
+
+.sponsor-info-card .sponsor-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
 /* Schedule */
 .schedule-list {
   display: flex;

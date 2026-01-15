@@ -3,14 +3,14 @@
 
 import React from "react";
 import { BlogCard } from "./BlogCard";
-import { blogPosts } from "../../data/blogData";
+import { blogData } from "../../data/blogData";
 import "./BlogList.css";
 
 const BlogList = () => {
   return (
     <div className="card-container">
-      {blogPosts.map(
-        ({ id, image, category, date, title, description, userId, userImg ,userName}) => (
+      {blogData.map(
+        ({ id, image, category, date, title, description, userId, userImg ,userName ,slug}) => (
           <BlogCard
             key={id}
             userImg={userImg}
@@ -21,6 +21,7 @@ const BlogList = () => {
             date={date}
             title={title}
             description={description}
+            slug={slug}
           />
         )
       )}

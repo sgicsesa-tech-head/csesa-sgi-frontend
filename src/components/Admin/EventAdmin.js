@@ -19,7 +19,10 @@ function EventAdmin() {
     category: 'Technical',
     registrationLink: '',
     capacity: '',
-    registered: 0
+    registered: 0,
+    sponsorName: '',
+    sponsorIcon: '',
+    sponsorBanner: ''
   });
 
   useEffect(() => {
@@ -46,8 +49,18 @@ function EventAdmin() {
       tags: formData.category === 'Technical' ? ['TECHNICAL'] : 
             formData.category === 'Social' ? ['SOCIAL'] : ['NON-TECHNICAL'],
       capacity: formData.capacity ? parseInt(formData.capacity) : undefined,
-      registered: formData.registered ? parseInt(formData.registered) : 0
+      registered: formData.registered ? parseInt(formData.registered) : 0,
+      sponsor: {
+        name: formData.sponsorName || '',
+        icon: formData.sponsorIcon || '',
+        banner: formData.sponsorBanner || ''
+      }
     };
+
+    // Remove sponsor if all fields are empty
+    if (!eventData.sponsor.name && !eventData.sponsor.icon && !eventData.sponsor.banner) {
+      delete eventData.sponsor;
+    }
 
     if (editingEvent) {
       setEvents(events.map(event => 
@@ -80,7 +93,10 @@ function EventAdmin() {
       category: event.category || 'Technical',
       registrationLink: event.registrationLink || '',
       capacity: event.capacity || '',
-      registered: event.registered || 0
+      registered: event.registered || 0,
+      sponsorName: event.sponsor?.name || '',
+      sponsorIcon: event.sponsor?.icon || '',
+      sponsorBanner: event.sponsor?.banner || ''
     });
     setShowForm(true);
   };
@@ -104,7 +120,10 @@ function EventAdmin() {
       category: 'Technical',
       registrationLink: '',
       capacity: '',
-      registered: 0
+      registered: 0,
+      sponsorName: '',
+      sponsorIcon: '',
+      sponsorBanner: ''
     });
     setEditingEvent(null);
     setShowForm(false);
@@ -276,6 +295,41 @@ function EventAdmin() {
                 onChange={handleInputChange}
                 placeholder="https://example.com/event-image.jpg"
                 required
+              />
+            </div>
+
+            <div className="form-section-title">Sponsor Information</div>
+            
+            <div className="form-group">
+              <label>Sponsor Name</label>
+              <input
+                type="text"
+                name="sponsorName"
+                value={formData.sponsorName}
+                onChange={handleInputChange}
+                placeholder="e.g., TechCorp Solutions"
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Sponsor Icon URL</label>
+              <input
+                type="url"
+                name="sponsorIcon"
+                value={formData.sponsorIcon}
+                onChange={handleInputChange}
+                placeholder="https://example.com/sponsor-icon.png"
+              />
+            </div>
+
+            <div className="form-group full-width">
+              <label>Sponsor Banner URL</label>
+              <input
+                type="url"
+                name="sponsorBanner"
+                value={formData.sponsorBanner}
+                onChange={handleInputChange}
+                placeholder="https://example.com/sponsor-banner.png"
               />
             </div>
           </div>

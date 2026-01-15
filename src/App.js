@@ -45,6 +45,7 @@ function App() {
           <Route path="/events/past" element={<PastEventsPage />} />
           <Route path="/events/:type/:id" element={<EventDetailPage />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route 
