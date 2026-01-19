@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ComputerIcon from '@mui/icons-material/Computer';
 import MicIcon from '@mui/icons-material/Mic';
 import ArticleIcon from '@mui/icons-material/Article';
+import { BlogPostSkeleton } from '../Common/Skeleton';
 import './BlogSection.css';
 
 const BlogSection = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate data loading
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const blogPosts = [
     {
       id: 1,
@@ -34,6 +46,33 @@ const BlogSection = () => {
       bgColor: '#2a2a2a'
     }
   ];
+
+  if (loading) {
+    return (
+      <section className="blog-section">
+        <div className="blog-header">
+          <div>
+            <h2 className="section-title">From the Blog</h2>
+            <p className="section-subtitle">
+              Insights from our student community.
+            </p>
+          </div>
+          <a href="/blog" className="view-all-link">
+            View Articles →
+          </a>
+        </div>
+        <div className="blog-grid">
+          <div className="featured-post">
+            <BlogPostSkeleton />
+          </div>
+          <div className="small-posts">
+            <BlogPostSkeleton />
+            <BlogPostSkeleton />
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="blog-section">

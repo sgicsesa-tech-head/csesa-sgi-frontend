@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getEventById } from '../data/eventsData';
+import Skeleton from '../components/Common/Skeleton';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -19,17 +20,52 @@ const EventDetailPage = () => {
   const { type, id } = useParams();
   const navigate = useNavigate();
   const [event, setEvent] = useState(null);
+  const [loading, setLoading] = useState(true);
   const isPast = type === 'past';
 
   useEffect(() => {
-    const eventData = getEventById(id, isPast);
-    if (eventData) {
-      setEvent(eventData);
-    } else {
-      // Event not found, redirect back
-      navigate('/events');
-    }
+    setLoading(true);
+    // Simulate data loading
+    const timer = setTimeout(() => {
+      const eventData = getEventById(id, isPast);
+      if (eventData) {
+        setEvent(eventData);
+      } else {
+        // Event not found, redirect back
+        navigate('/events');
+      }
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, [id, isPast, navigate]);
+
+  if (loading) {
+    return (
+      <div className="event-detail-page">
+        <div className="event-hero">
+          <div className="event-hero-image">
+            <Skeleton width="100%" height="500px" />
+          </div>
+          <div className="event-hero-content">
+            <Skeleton width="150px" height="36px" style={{ marginBottom: '20px' }} />
+            <Skeleton width="70%" height="48px" style={{ marginBottom: '20px' }} />
+            <div style={{ display: 'flex', gap: '24px', marginTop: '16px' }}>
+              <Skeleton width="150px" height="24px" />
+              <Skeleton width="120px" height="24px" />
+              <Skeleton width="180px" height="24px" />
+            </div>
+          </div>
+        </div>
+        <div className="event-detail-content" style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+          <Skeleton width="100%" height="200px" style={{ marginBottom: '24px', borderRadius: '12px' }} />
+          <Skeleton width="100%" height="16px" style={{ marginBottom: '12px' }} />
+          <Skeleton width="100%" height="16px" style={{ marginBottom: '12px' }} />
+          <Skeleton width="90%" height="16px" style={{ marginBottom: '12px' }} />
+        </div>
+      </div>
+    );
+  }
 
   if (!event) {
     return (
