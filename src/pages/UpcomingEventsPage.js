@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { upcomingEvents } from '../data/eventsData';
 import EventCard from '../components/Events/EventCard';
+import { EventCardSkeleton, SkeletonGrid } from '../components/Common/Skeleton';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import EventBusyIcon from '@mui/icons-material/EventBusy';
 import './UpcomingEventsPage.css';
 
 const UpcomingEventsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [loading, setLoading] = useState(true);
   
   const categories = ['All', 'Technical', 'Social', 'Non-Technical'];
+
+  useEffect(() => {
+    // Simulate data loading
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [selectedCategory]);
 
   const filteredEvents = selectedCategory === 'All' 
     ? upcomingEvents 
@@ -54,7 +66,9 @@ const UpcomingEventsPage = () => {
 
           {/* Events Grid */}
           <div className="events-grid">
-            {filteredEvents.length > 0 ? (
+            {loading ? (
+              <SkeletonGrid count={6} Component={EventCardSkeleton} />
+            ) : filteredEvents.length > 0 ? (
               filteredEvents.map((event) => (
                 <EventCard key={event.id} event={event} isPast={false} />
               ))

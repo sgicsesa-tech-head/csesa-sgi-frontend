@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { upcomingEvents, pastEvents } from '../data/eventsData';
 import EventCard from '../components/Events/EventCard';
+import { EventCardSkeleton, SkeletonGrid } from '../components/Common/Skeleton';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import HistoryIcon from '@mui/icons-material/History';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
@@ -12,9 +13,31 @@ const Events = () => {
   const navigate = useNavigate();
   const [upcomingFilter, setUpcomingFilter] = useState('All');
   const [pastFilter, setPastFilter] = useState('All');
+  const [loadingUpcoming, setLoadingUpcoming] = useState(true);
+  const [loadingPast, setLoadingPast] = useState(true);
 
   const upcomingCategories = ['All', 'Technical', 'Social', 'Non-Technical'];
   const pastYears = ['All', '2025'];
+
+  useEffect(() => {
+    // Simulate data loading for upcoming events
+    setLoadingUpcoming(true);
+    const timer = setTimeout(() => {
+      setLoadingUpcoming(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [upcomingFilter]);
+
+  useEffect(() => {
+    // Simulate data loading for past events
+    setLoadingPast(true);
+    const timer = setTimeout(() => {
+      setLoadingPast(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [pastFilter]);
 
   const filteredUpcomingEvents = upcomingFilter === 'All' 
     ? upcomingEvents.slice(0, 3)
@@ -89,7 +112,9 @@ const Events = () => {
 
           {/* Events Preview Grid */}
           <div className="events-preview-grid">
-            {filteredUpcomingEvents.length > 0 ? (
+            {loadingUpcoming ? (
+              <SkeletonGrid count={3} Component={EventCardSkeleton} />
+            ) : filteredUpcomingEvents.length > 0 ? (
               filteredUpcomingEvents.map((event) => (
                 <EventCard key={event.id} event={event} isPast={false} />
               ))

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { pastEvents } from '../data/eventsData';
 import EventCard from '../components/Events/EventCard';
+import { EventCardSkeleton, SkeletonGrid } from '../components/Common/Skeleton';
 import HistoryIcon from '@mui/icons-material/History';
 import SearchOffIcon from '@mui/icons-material/SearchOff';
 import './PastEventsPage.css';
@@ -8,9 +9,20 @@ import './PastEventsPage.css';
 const PastEventsPage = () => {
   const [selectedYear, setSelectedYear] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [loading, setLoading] = useState(true);
   
   const years = ['All', '2023', '2022'];
   const categories = ['All', 'Technical', 'Seminar', 'Cultural'];
+
+  useEffect(() => {
+    // Simulate data loading
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [selectedYear, selectedCategory]);
 
   const filteredEvents = pastEvents.filter(event => {
     const yearMatch = selectedYear === 'All' || event.date.includes(selectedYear);
@@ -79,7 +91,9 @@ const PastEventsPage = () => {
 
           {/* Events Grid */}
           <div className="events-grid">
-            {filteredEvents.length > 0 ? (
+            {loading ? (
+              <SkeletonGrid count={6} Component={EventCardSkeleton} />
+            ) : filteredEvents.length > 0 ? (
               filteredEvents.map((event) => (
                 <EventCard key={event.id} event={event} isPast={true} />
               ))
