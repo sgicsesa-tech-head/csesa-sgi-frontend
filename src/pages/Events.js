@@ -28,16 +28,6 @@ const Events = () => {
     return () => clearTimeout(timer);
   }, [upcomingFilter]);
 
-  useEffect(() => {
-    // Simulate data loading for past events
-    setLoadingPast(true);
-    const timer = setTimeout(() => {
-      setLoadingPast(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [pastFilter]);
-
   const filteredUpcomingEvents = upcomingFilter === 'All' 
     ? upcomingEvents.slice(0, 3)
     : upcomingEvents.filter(event => event.category === upcomingFilter).slice(0, 3);
