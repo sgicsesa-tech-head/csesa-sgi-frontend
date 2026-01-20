@@ -14,7 +14,6 @@ const Events = () => {
   const [upcomingFilter, setUpcomingFilter] = useState('All');
   const [pastFilter, setPastFilter] = useState('All');
   const [loadingUpcoming, setLoadingUpcoming] = useState(true);
-  const [loadingPast, setLoadingPast] = useState(true);
 
   const upcomingCategories = ['All', 'Technical', 'Social', 'Non-Technical'];
   const pastYears = ['All', '2025'];
@@ -28,16 +27,6 @@ const Events = () => {
 
     return () => clearTimeout(timer);
   }, [upcomingFilter]);
-
-  useEffect(() => {
-    // Simulate data loading for past events
-    setLoadingPast(true);
-    const timer = setTimeout(() => {
-      setLoadingPast(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [pastFilter]);
 
   const filteredUpcomingEvents = upcomingFilter === 'All' 
     ? upcomingEvents.slice(0, 3)
