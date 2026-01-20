@@ -14,7 +14,6 @@ const Events = () => {
   const [upcomingFilter, setUpcomingFilter] = useState('All');
   const [pastFilter, setPastFilter] = useState('All');
   const [loadingUpcoming, setLoadingUpcoming] = useState(true);
-  const [loadingPast, setLoadingPast] = useState(true);
 
   const upcomingCategories = ['All', 'Technical', 'Social', 'Non-Technical'];
   const pastYears = ['All', '2025'];

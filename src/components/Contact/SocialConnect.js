@@ -1,5 +1,5 @@
 import React from "react";
-import { GitHub, Twitter, LinkedIn, Instagram, Facebook } from "@mui/icons-material";
+import { GitHub, Twitter, LinkedIn, Instagram } from "@mui/icons-material";
 import "./SocialConnect.css";
 
 const SocialConnect = () => {

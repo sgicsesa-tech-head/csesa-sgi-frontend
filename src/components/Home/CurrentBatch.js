@@ -41,7 +41,7 @@ const CurrentBatch = () => {
         <div className="batch-image-wrapper">
           <img 
             src="/api/placeholder/1200/600" 
-            alt="Current Batch Group Photo" 
+            alt="Current Batch Members" 
             className="batch-group-photo"
           />
           <div className="image-overlay">
