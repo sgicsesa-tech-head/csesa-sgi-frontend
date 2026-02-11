@@ -11,6 +11,8 @@ import SchoolIcon from '@mui/icons-material/School';
 const About = () => {
   const [selectedBatch, setSelectedBatch] = useState("2025-26");
 
+  console.log(membersData);
+  
   const facultyGuardians = [
     {
       name: "Prof. Sagar V. Chavan",
