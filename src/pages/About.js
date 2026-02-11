@@ -9,8 +9,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import SchoolIcon from '@mui/icons-material/School';
 
 const About = () => {
-  const [selectedBatch, setSelectedBatch] = useState("2025-26");
-
+  const [selectedBatch, setSelectedBatch] = useState("2025-26");  
   const facultyGuardians = [
     {
       name: "Prof. Sagar V. Chavan",

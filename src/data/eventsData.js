@@ -2,8 +2,8 @@
 export const upcomingEvents = [
   {
     id: 1,
-    title: "Annual Tech-Fest 2026",
-    description: "Our flagship event returns! Keynotes from industry giants, workshops on Generative AI, and unparalleled networking opportunities.",
+    title: "Technoverse 2026",
+    description: "Our flagship event! Keynotes from industry giants, workshops on Generative AI, and unparalleled networking opportunities.",
     fullDescription: "Join us for our most anticipated event of the year! The Annual Tech Symposium brings together technology leaders, students, and industry professionals for a day of learning and networking. This year's theme focuses on emerging technologies and their impact on society. Expect keynote speeches from leading tech executives, hands-on workshops, panel discussions, and plenty of networking opportunities.",
     date: "Mar 5",
     time: "10:00 AM",
